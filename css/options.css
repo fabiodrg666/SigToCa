@@ -1,5 +1,28 @@
+:root {
+    --fontFamily: 'Open Sans';
+    --accent-active: rgb(192,57,43);
+    --accent-disable: rgb(150,150,150);
+    --accent-hover: rgb(200,200,200);
+}
+
 * {
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(`fonts/OpenSans-Regular.woff`);
+}
+
+@font-face {
+    font-family: 'Open Sans Ligth';
+    font-weight: 300;
+    src: local("chrome-extension://adbgknnokgjcfoeoiogghmlcpddbnkbo/fonts/OpenSans-Ligth.ttf");
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
 }
 
 /* For small views */
@@ -70,4 +93,21 @@
 .formatDiv span, .formatDiv input[type="text"] {
     width: 100%;
     display: inline-block;
+}
+
+.main-font {
+    font-family: var(--fontFamily);
+    font-style: normal;
+}
+.page-header {
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 48px;
+    color: var(--accent-disable);
+    margin: 5px 40px 5px 5px;
+    transition: color 0.5s ease-in-out;
+}
+
+.page-header:hover {
+    color: var(--accent-hover);
 }
